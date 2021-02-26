@@ -1,5 +1,21 @@
 /* CSS Document */
 
+:root{
+	--oscuro: rgba(0, 0, 0, .85);
+	--oscuro_hover: rgba(0, 0, 0, 1);
+	--claro: #b3b5b7;
+	--claro_hover: rgba(255, 255, 255, 1);
+}
+
+/*Clase para invertir los colores cuando esta se active*/
+.modo{
+	--oscuro: #b3b5b7;/*rgba(255, 255, 255, .85);*/
+	--claro: rgba(0, 0, 0, .85);
+	--oscuro_hover: rgba(255, 255, 255, 1);
+	--claro_hover: rgba(0, 0, 0, 1);
+}
+
+
 .container {
   max-width: 960px;
 }
@@ -84,7 +100,8 @@ footer{
 
 .panel-flotante-contenedor>.panel-flotante>#sol{
 	position: absolute;
-	top: 50;
+	font-size: 45px;
+	top: 70px;
 }
 
 .boton-flotante{
@@ -104,18 +121,20 @@ footer{
 }
 /*-------------------------------*/
 .site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: var(--oscuro);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   padding-right: 30px;
+  transition: 1s ease-in-out;
 }
+
 .site-header a {
-  color: #999;
+  color: var(--claro);
   transition: ease-in-out color .15s;
   
 }
 .site-header a:hover {
-  color: #fff;
+  color: var(--claro_hover);
   text-decoration: none;
 }
 
