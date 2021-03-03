@@ -22,13 +22,6 @@
  * Custom translucent site header
  */
 /* Propio*/
-.alinear {
-  text-align: center;
-}
-.alinear > ul > a {
-  display: inline;
-  margin-right: 50px;
-}
 .logo {
   width: 100px;
   height: 100px;

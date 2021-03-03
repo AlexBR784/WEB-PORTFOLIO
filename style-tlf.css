@@ -2,14 +2,14 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
-.site-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 .ca-p {
   visibility: hidden;
 }
 .carousel-item {
   height: 200px; /*Acortamos altura carousel*/
+}
+
+.elementos-nav{
+	display: block;
 }
