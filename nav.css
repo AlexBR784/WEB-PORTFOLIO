@@ -184,3 +184,19 @@ footer {
 .overflow-hidden {
   overflow: hidden;
 }
+
+@media (max-width: 767.98px) {
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.ca-p {
+  visibility: hidden;
+}
+.carousel-item {
+  height: 200px; /*Acortamos altura carousel*/
+}
+	
+}
