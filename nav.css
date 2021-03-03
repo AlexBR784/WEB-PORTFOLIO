@@ -22,6 +22,10 @@
  * Custom translucent site header
  */
 /* Propio*/
+.color_barras{
+	color: var(--claro);
+	font-size:28px;
+}
 .logo {
   width: 100px;
   height: 100px;
@@ -91,7 +95,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 2;
+  z-index: 999;
 }
 /*-------------------------------*/
 .site-header {
