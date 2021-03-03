@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
+.site-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ca-p {
+  visibility: hidden;
+}
+.carousel-item {
+  height: 200px; /*Acortamos altura carousel*/
+}
