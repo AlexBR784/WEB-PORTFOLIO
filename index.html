@@ -191,5 +191,14 @@ p.min.js"></script>
 </footer>
 </body>
 <script src="script.js" type="application/javascript"></script>
-	<script src="Audio/script_audio.js" type="text/javascript"></script>
+<script src="Audio/script_audio.js" type="text/javascript"></script>
+<script>
+	window.onload = ()=>{   //Para cargar video desde el index y asi poder mostrar su duracion
+		v.onloadeddata = () => {
+  		dur.innerHTML = "Duración: " + v.duration + " seg.";
+}
+	
+	}
+	
+</script>
 </html>
