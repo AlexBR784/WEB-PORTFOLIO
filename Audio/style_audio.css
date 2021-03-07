@@ -1,0 +1,30 @@
+/* CSS Document */
+.caja_sel {
+  border: 1px solid black;
+  width: 400px;
+  height: auto;
+	border-radius: 5%;
+	box-shadow: 10px 10px 5px gray;
+}
+.caja_sel p {
+  overflow: auto;
+}
+.caja_sel .radios .container_radio {
+  display: block;
+}
+.parte_audio div {
+  display: inline-block;
+}
+.caja_sel {
+  padding: 10px;
+  margin: 10px;
+  margin-left: 0;
+}
+.parte_audio {
+  margin-bottom: 10px;
+}
+
+#audio{
+	box-shadow: 10px 10px 5px gray;
+	border-radius: 25px;
+}

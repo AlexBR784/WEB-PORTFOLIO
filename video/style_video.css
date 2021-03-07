@@ -1,0 +1,14 @@
+/* CSS Document */
+
+.controles .botones .controlb{
+	width: 50px;
+	height: 30px;
+	display: inline-block;
+	margin-bottom: 15px;
+	border-radius: 15%;
+}
+
+.parte_video{
+	position: relative;
+	text-align: center;
+}
