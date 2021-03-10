@@ -18,7 +18,7 @@
 <body>
 <!-- NAVEGADOR -->
 <nav id="navbar" class="navbar navbar-expand-sm site-header sticky-top py-1" data-toggle="affix">
-  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap"> <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="logo1.png" alt="logo_portfolio"></a>
+  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap"> <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="imagenes/logo1.png" alt="logo_portfolio"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars color_barras"></i></span> </button>
     <div class="collapse navbar-collapse text-center" id="navbarsExample11">
       <ul class="navbar-nav">
@@ -51,41 +51,54 @@
     </div>
   </div>
 </nav>
-<div class="jumbotron text-lg-left">
-  <div class="parte_video">
-    <video id="video" width="400" height="200">
-      <source src="video/small.webm" type="video/webm">
-    </video>
-    <div class="controles">
-      <div class="botones">
-        <button class="controlb" type="button" id="play" onClick="playVideo()"> ></button>
-        <button class="controlb" type="button" id="stop" onClick="stopVideo()"> ||</button>
-        <button class="controlb" type="button" id="pause" onClick="pauseVideo()">º</button>
-        <button class="controlb" type="button" id="fw" onClick="fwVideo(2)">>></button>
-        <button class="controlb" type="button" id="fullscreen" onClick="openFullscreen()">-></button>
+<div class="jumbotron text-center">
+  <h1> Perfiles</h1>
+</div>
+<div class="jumbotron text-left div_vid" id="cont_vid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1 text-left">      
+      </div>
+      <div class="col-md-5">
+        <div class="parte_video">
+          <video id="video" width="400" height="200" onClick="clickVideo();">
+            <source src="video/small.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <div class="controles">
+          <div class="botones">
+            <button class="controlb" type="button" id="play" onClick="playVideo()"><img src="video/botones/play.png"/></button>
+            <button class="controlb" type="button" id="stop" onClick="stopVideo()"> <img src="video/botones/stop.png"/></button>
+            <button class="controlb" type="button" id="pause" onClick="pauseVideo()"><img src="video/botones/pausa.png"/></button>
+            <button class="controlb" type="button" id="fw" onClick="fwVideo(2)"><img src="video/botones/avance.png"/></button>
+            <button class="controlb" type="button" id="fullscreen" onClick="openFullscreen()"><img src="video/botones/completa.png"/></button>
+          </div>
+        </div>
+        <div class="slider">
+          <input class="controlv" id="vol-control" type="range" min="0" max="100" step="1">
+          </input>
+        </div>
+        <div class="texto">
+          <h3 id="dura">Duración: </h3>
+          <h3 id="tiempo_ac">Estamos en el segundo: </h3>
+        </div>
+        <div>
+          <progress id="progreso" value="0" max="100"></progress>
+        </div>
+      </div>
       </div>
     </div>
-    <div class="slider">
-      <input class="controlv" id="vol-control" type="range" min="0" max="100" step="1">
-      </input>
-    </div>
-    <div class="texto">
-      <h3 id="dura">Duración: </h3>
-      <h3 id="tiempo_ac">Estamos en el segundo: </h3>
-    </div>
-    <div>
-      <progress id="progreso" value="0" max="100"></progress>
-    </div>
-  </div>
 </div>
-</div>
-</div>
-</div>
+
+
 <main>
   <div class="row">
     <div class="container marketing">
       <div class="row">
-        <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle"src="contacto.png" alt="alumno1" width="125" height="125">
+        <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle"src="imagenes/contacto.png" alt="alumno1" width="125" height="125">
           <h5>Luis Albacete Caballero</h5>
           <p> ¡Hola! Soy Luis Albacete Caballero, vivo en Montserrat, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Álex. </p>
           <div class="row">
@@ -122,7 +135,7 @@
           <h6>Redes sociales y email de contacto</h6>
         </div>
         <div class="col-lg-2"> </div>
-        <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle"src="contacto.png" alt="alumno1" width="125" height="125">
+        <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle"src="imagenes/contacto.png" alt="alumno1" width="125" height="125">
           <h5>Alejandro Bernardo Rupérez</h5>
           <p> ¡Hola! Soy Alejandro Bernardo Rupérez, vivo en la Eliana, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Luis. </p>
           <div class="row">

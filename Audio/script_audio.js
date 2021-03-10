@@ -4,15 +4,27 @@ var dur = document.getElementById("dura");
 var t_res = document.getElementById("tiempo_res");
 var rep = document.getElementById("rep");
 var e = document.getElementById("estado");
+var source = document.getElementById("audioSrc");
+var audiosel = document.getElementById("audios");
 
 a.onloadeddata = () => {
-  dur.innerHTML = "Este audio tiene una duración total de: " + a.duration + " seg.";
-  rep.innerHTML = "Estas reproduciendo: " + a.src;
+  dur.innerHTML = "Este audio tiene una duración total de: " + Math.floor(a.duration) + " seg.";
+  rep.innerHTML = "Estas reproduciendo: " + source.getAttribute("src");
+}
+
+audiosel.onchange = ()=>{
+	a.pause();
+	source.src = audiosel.options[audiosel.selectedIndex].value;
+	a.load();
 }
 
 
+
 a.ontimeupdate = () => {
-  t_res.innerHTML = "Tiempo restante: " + a.duration - a.currentTime + " seg.";
+    let duration = parseInt(a.duration),
+    currentTime = parseInt(a.currentTime),
+    timeLeft = duration - currentTime;
+    t_res.innerHTML = "Tiempo restante: " + timeLeft + " seg.";
   if (a.paused) {
     e.innerHTML = "Estado de la reproducción: pausado";
   } else {

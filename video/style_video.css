@@ -1,13 +1,23 @@
 /* CSS Document */
 
 .controles .botones .controlb{
-	width: 50px;
+	width: 30px;
 	height: 30px;
 	display: inline-block;
 	margin-bottom: 15px;
+	margin-right:5px;
 	border-radius: 15%;
+	padding:2px;
+	border:none;
+}
+.div_vid{
+    box-shadow: -5px 0px 5px black;
 }
 
+button > img{
+    width:30px;
+    height:30px;
+  }
 .parte_video{
 	position: relative;
 	text-align: center;

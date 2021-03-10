@@ -9,6 +9,14 @@ vol.addEventListener('mousemove', () => {
   v.volume = vol.value / 100;
 });
 
+function clickVideo(){
+	if(v.paused){
+		playVideo();
+	}else if(!v.paused){
+		pauseVideo();
+	}
+}
+
 v.onloadeddata = () => {
   dur.innerHTML = "Duración: " + v.duration + " seg.";
 }
@@ -21,14 +29,18 @@ v.ontimeupdate = () => {
 
 function playVideo() {
   document.getElementById("video").play();
+  var aux = document.getElementById("cont_vid").style.boxShadow = "-5px 0px 5px red";
 }
 
 function stopVideo() {
   document.getElementById("video").currentTime = 0;
+  document.getElementById("video").pause();
+  var aux = document.getElementById("cont_vid").style.boxShadow = "-5px 0px 5px black";
 }
 
 function pauseVideo() {
   document.getElementById("video").pause();
+  var aux = document.getElementById("cont_vid").style.boxShadow = "-5px 0px 5px black";
 }
 
 function fwVideo(skip) {
