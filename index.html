@@ -112,7 +112,7 @@ p.min.js"></script>
         <div class="col-lg-2"> </div>
         <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle"src="imagenes/contacto.png" alt="alumno1" width="125" height="125">
           <h5>Alejandro Bernardo Rupérez</h5>
-          <p> <!-- Luis --> 
+          <p>
             ¡Hola! Soy Alejandro Bernardo Rupérez, vivo en la Eliana, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Luis. </p>
           <a href="perfiles.html" class="btn btn-link">Saber más...</a> </div>
       </div>
@@ -135,15 +135,39 @@ p.min.js"></script>
           <p class="lead"> Es en este centro de Burjassot, en la Universitat de València, dónde nos conocimos y cursamos durante 4 años el grado de Ingeniería Multimedia</p>
         </div>
       </div>
+      <hr class="featurette-divider">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <h2 class="featurette-heading titMusica"> Música de fondo</h2>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-3">
+          <div class="parte_audio">
+            <div id="selector" class="caja_sel">
+              <div class="radios">
+                <div class="container_radio">
+                  <select name="audio" id="audios">
+                    <option value="Audio/Bg_music.mp3">Music</option>
+                    <option value="Audio/horse2.ogv">Audio 2</option>
+                  </select>
+                  <p id="dura">Este audio tiene una duración total de:</p>
+                  <p id="tiempo_res">Tiempo restante: </p>
+                  <p id="rep">Estas reproduciendo: </p>
+                  <p id="estado">Estado de la reproducción: </p>
+                </div>
+              </div>
+            </div>
+            <div class="caja_audio">
+              <audio id="audio" controls loop preload="metadata">
+                <source id="audioSrc" src="Audio/Bg_music.mp3" type="audio/ogg">
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <hr class="featurette-divider">
-    </div>
-    <div class="col-md-2"></div>
   </div>
 </main>
 
@@ -151,7 +175,8 @@ p.min.js"></script>
 <div class="panel-flotante-contenedor">
   <div class="panel-flotante">
     <p>Modifica la apariencia</p>
-    <i id="sol" class="fas fa-sun btn"></i> </div>
+    <i id="sol" class="fas fa-sun btn"></i> 
+	<i id="volumen" class="fas fa-volume-up btn"></i></div>
 </div>
 <button class="boton-flotante">Abrir Panel</button>
 
@@ -166,36 +191,16 @@ p.min.js"></script>
 <footer class="container">
   <p class="float-right"> <a href="#"> Volver arriba</a> </p>
   <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
-  <div class="parte_audio">
-    <div id="selector" class="caja_sel">
-      <div class="radios">
-        <div class="container_radio">
-          <select name="audio" id="audios">
-            <option value="Audio/horse.ogv">Audio 1</option>
-            <option value="Audio/horse2.ogv">Audio 2</option>
-          </select>
-          <p id="dura">Este audio tiene una duración total de:</p>
-          <p id="tiempo_res">Tiempo restante: </p>
-          <p id="rep">Estas reproduciendo: </p>
-          <p id="estado">Estado de la reproducción: </p>
-        </div>
-      </div>
-    </div>
-    <div class="caja_audio">
-      <audio id="audio" controls preload="metadata">
-        <source id="audioSrc" src="Audio/horse.ogv" type="audio/ogg">
-      </audio>
-    </div>
-  </div>
 </footer>
 </body>
 <script src="script.js" type="application/javascript"></script>
 <script src="Audio/script_audio.js" type="text/javascript"></script>
 <script>
 	window.onload = ()=>{   //Para cargar video desde el index y asi poder mostrar su duracion
+		playAudioOnLoad();
 		v.onloadeddata = () => {
   		dur.innerHTML = "Duración: " + v.duration + " seg.";
-}
+	}
 	
 	}
 	

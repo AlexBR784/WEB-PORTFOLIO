@@ -18,13 +18,10 @@
 .container {
   max-width: 960px;
 }
-/*
- * Custom translucent site header
- */
 /* Propio*/
-.color_barras{
-	color: var(--claro);
-	font-size:28px;
+.color_barras {
+  color: var(--claro);
+  font-size: 28px;
 }
 .logo {
   width: 100px;
@@ -82,6 +79,12 @@ footer {
   font-size: 45px;
   top: 70px;
 }
+
+.panel-flotante-contenedor > .panel-flotante > #volumen {
+  position: absolute;
+  font-size: 45px;
+  top: 180px;
+}
 .boton-flotante {
   border-radius: 27px;
   background-color: #262626;
@@ -97,7 +100,11 @@ footer {
   right: 20px;
   z-index: 999;
 }
-/*-------------------------------*/
+
+.titMusica{
+  padding-top:70%;
+}
+
 .site-header {
   background-color: var(--oscuro);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -126,9 +133,6 @@ footer {
 .carousel-caption p {
   text-align: left;
 }
-/*
- * Dummy devices (replace them with your own or something else entirely!)
- */
 .product-device {
   position: absolute;
   right: 10%;
@@ -157,9 +161,6 @@ footer {
   left: 5%;
   background-color: #e5e5e5;
 }
-/*
- * Extra utilities
- */
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
@@ -174,6 +175,13 @@ footer {
   -webkit-box-flex: 1;
   flex: 1;
 }
+
+@media (max-width: 992px){
+  .titMusica{
+    padding-top:0%;
+  }
+}
+
 @media (min-width: 768px) {
   .flex-md-equal > * {
     -ms-flex: 1;
@@ -184,19 +192,19 @@ footer {
 .overflow-hidden {
   overflow: hidden;
 }
-
 @media (max-width: 767.98px) {
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+  .ca-p {
+    visibility: hidden;
+  }
+  .carousel-item {
+    height: 200px; /*Acortamos altura carousel*/
+  }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
-* {
-  font-family: 'Roboto', sans-serif;
-}
-
-.ca-p {
-  visibility: hidden;
-}
-.carousel-item {
-  height: 200px; /*Acortamos altura carousel*/
-}
-	
+	#mapa{
+		z-index: 998;
+	}
 }

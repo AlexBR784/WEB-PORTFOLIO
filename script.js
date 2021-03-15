@@ -3,7 +3,9 @@
 var btn_flotante = document.querySelector('.boton-flotante'); //Conseguimos la clase del boton flotante
 const panel_flotante_contenedor = document.querySelector('.panel-flotante-contenedor'); //Conseguimos la clase del panel contenedor
 var icono_sol = document.getElementById("sol");
+var icono_vol = document.getElementById("volumen");
 var navbar = document.getElementById("navbar");
+var audio = document.getElementById("audio")
 
 
 btn_flotante.addEventListener('click', () => {
@@ -23,3 +25,12 @@ icono_sol.addEventListener('click', () => {
 
 
 });
+
+icono_vol.addEventListener('click', () => {
+  icono_vol.classList.toggle('fa-volume-up');
+  audio.muted = !audio.muted;
+  icono_vol.classList.toggle('fa-volume-mute');
+
+
+});
+
