@@ -34,6 +34,6 @@ a.ontimeupdate = () => {
 }
 
 function playAudioOnLoad(){
-	a.play();
-	a.volume = 0.2;
+	document.getElementById("audio").play();
+	document.getElementById("audio").volume = 0.2;
 }

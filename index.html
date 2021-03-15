@@ -112,8 +112,7 @@ p.min.js"></script>
         <div class="col-lg-2"> </div>
         <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle"src="imagenes/contacto.png" alt="alumno1" width="125" height="125">
           <h5>Alejandro Bernardo Rupérez</h5>
-          <p>
-            ¡Hola! Soy Alejandro Bernardo Rupérez, vivo en la Eliana, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Luis. </p>
+          <p> ¡Hola! Soy Alejandro Bernardo Rupérez, vivo en la Eliana, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Luis. </p>
           <a href="perfiles.html" class="btn btn-link">Saber más...</a> </div>
       </div>
     </div>
@@ -159,7 +158,7 @@ p.min.js"></script>
               </div>
             </div>
             <div class="caja_audio">
-              <audio id="audio" controls loop preload="metadata">
+              <audio id="audio" controls autoplay="autoplay" loop preload="auto">
                 <source id="audioSrc" src="Audio/Bg_music.mp3" type="audio/ogg">
               </audio>
             </div>
@@ -175,8 +174,7 @@ p.min.js"></script>
 <div class="panel-flotante-contenedor">
   <div class="panel-flotante">
     <p>Modifica la apariencia</p>
-    <i id="sol" class="fas fa-sun btn"></i> 
-	<i id="volumen" class="fas fa-volume-up btn"></i></div>
+    <i id="sol" class="fas fa-sun btn"></i> <i id="volumen" class="fas fa-volume-up btn"></i></div>
 </div>
 <button class="boton-flotante">Abrir Panel</button>
 
@@ -189,7 +187,7 @@ p.min.js"></script>
   <div class="col-sm-2"></div>
 </div>
 <footer class="container">
-  <p class="float-right"> <a href="#"> Volver arriba</a> </p>
+  <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
   <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
 </footer>
 </body>
@@ -197,11 +195,11 @@ p.min.js"></script>
 <script src="Audio/script_audio.js" type="text/javascript"></script>
 <script>
 	window.onload = ()=>{   //Para cargar video desde el index y asi poder mostrar su duracion
+		a.paused = false;
 		playAudioOnLoad();
 		v.onloadeddata = () => {
   		dur.innerHTML = "Duración: " + v.duration + " seg.";
-	}
-	
+		}
 	}
 	
 </script>
