@@ -37,10 +37,3 @@ function playAudioOnLoad(){
 	a.play();
 	a.volume = 0.2;
 }
-
-function muteAudio(){
-	if (!muted)
-		a.muted = true;
-	else if(muted)
-		a.muted = false;
-}
