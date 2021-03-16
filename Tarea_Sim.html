@@ -22,12 +22,12 @@
       <ul class="navbar-nav">
         <li class="nav-item active">
           <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Animación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark">Tarea 2</a> </div>
+            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Ani.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Ani.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a></div>
           </div>
         </li>
         <li class="nav-item">
           <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" >Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark">Tarea 2</a> </div>
+            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
           </div>
         </li>
         <li class="nav-item">
@@ -50,24 +50,16 @@
   </div>
 </nav>
 <div class="jumbotron text-center">
-  <h1>Tarea X Simulación</h1>
+  <h1>Tareas Simulación</h1>
 </div>
 <main>
   <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-      <h1> Tarea x de Simulación</h1>
-      <p> En esta tarea hemos tratado bla 
-        bla bla bla bla bla bla bla bla
-        bla bla bla bla bla bla bla bla
-        bla bla bla bla bla bla bla bla
-        bla bla bla bla bla bla bla bla
-        bla bla bla bla bla bla bla bla
-        bla bla bla bla ... </p>
-      <img class="img-thumbnail text-center"src="imagenes/uni.png" alt="img_uni" width="600" height="600">
-      <p> ... bla bla bla bla bla bla bla bla
-        bla bla bla bla bla bla bla bla
-        bla bla bla bla </p>
+      <h1 id="header-sim"> </h1>
+      <p id="p-tareaS"></p>
+      <img id="video-sim" class="img-thumbnail text-center"src="" alt="img_uni" width="600" height="600">
+      <p id="p-tareaS1"></p>
     </div>
     <div class="col-sm-3"></div>
   </div>
@@ -80,9 +72,11 @@
   </div>
   <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-2"> <a href="#">Ejercicio anterior</a> </div>
+    <div class="col-md-2"> <a id="ant-ejS" href="#" onclick="antEj(1);">Ejercicio anterior</a> </div>
     <div class="col-sm-2"></div>
-    <div class="col-md-2"> <a href="#">Ejercicio siguiente</a> </div>
+    <div class="col-md-2"> <a id="sig-ejS" href="#" onclick="nextEj(1);">Ejercicio siguiente
+      
+		</a></div>
     <div class="col-md-5"></div>
   </div>
   <div class="row">
@@ -108,4 +102,15 @@
   <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
 </footer>
 </body>
+<script src="script.js" type="application/javascript"></script>
+<script>
+	window.onload = ()=>{
+		ej = localStorage.getItem("ejercicio");
+		changeContent(1);
+		delete(ejaux);
+	}
+	
+	
+	
+</script>
 </html>
