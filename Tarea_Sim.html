@@ -59,6 +59,7 @@
       <h1 id="header-sim"> </h1>
       <p id="p-tareaS"></p>
       <img id="video-sim" class="img-thumbnail text-center"src="" alt="img_uni" width="600" height="600">
+	  <img id="video-sim1" class="img-thumbnail text-center imagen-tarea mostrar"src="" alt="" width="600" height="600">
       <p id="p-tareaS1"></p>
     </div>
     <div class="col-sm-3"></div>
@@ -76,7 +77,7 @@
     <div class="col-sm-2"></div>
     <div class="col-md-2"> <a id="sig-ejS" href="#" onclick="nextEj(1);">Ejercicio siguiente
       
-		</a></div>
+	</a></div>
     <div class="col-md-5"></div>
   </div>
   <div class="row">
@@ -107,7 +108,6 @@
 	window.onload = ()=>{
 		ej = localStorage.getItem("ejercicio");
 		changeContent(1);
-		delete(ejaux);
 	}
 	
 	

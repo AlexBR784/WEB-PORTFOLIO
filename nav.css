@@ -2,6 +2,7 @@
 .row {
   margin-right: 0; /*Solucion error espacio blanco a la derecha*/
 }
+
 :root {
   --oscuro: rgba(0, 0, 0, .85);
   --oscuro_hover: rgba(0, 0, 0, 1);
