@@ -2,7 +2,6 @@
 .row {
   margin-right: 0; /*Solucion error espacio blanco a la derecha*/
 }
-
 :root {
   --oscuro: rgba(0, 0, 0, .85);
   --oscuro_hover: rgba(0, 0, 0, 1);
@@ -80,7 +79,6 @@ footer {
   font-size: 45px;
   top: 70px;
 }
-
 .panel-flotante-contenedor > .panel-flotante > #volumen {
   position: absolute;
   font-size: 45px;
@@ -97,15 +95,13 @@ footer {
   line-height: 20px;
   padding: 12px 20px;
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   right: 20px;
   z-index: 999;
 }
-
-.titMusica{
-  padding-top:70%;
+.titMusica {
+  padding-top: 70%;
 }
-
 .site-header {
   background-color: var(--oscuro);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -176,13 +172,11 @@ footer {
   -webkit-box-flex: 1;
   flex: 1;
 }
-
-@media (max-width: 992px){
-  .titMusica{
-    padding-top:0%;
+@media (max-width: 992px) {
+  .titMusica {
+    padding-top: 0%;
   }
 }
-
 @media (min-width: 768px) {
   .flex-md-equal > * {
     -ms-flex: 1;
@@ -204,8 +198,22 @@ footer {
   .carousel-item {
     height: 200px; /*Acortamos altura carousel*/
   }
-
-	#mapa{
-		z-index: 998;
-	}
+  #mapa {
+    z-index: 998;
+  }
+  p, h1, h2, h3 {
+    padding-left: 10px;
+  }
+  #video-tarea {
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+  }
+  #selector {
+    margin-left: -35px;
+  }
+  .boton-flotante {
+    bottom: 80px;
+    right: 10px;
+  }
 }
