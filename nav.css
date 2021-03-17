@@ -211,9 +211,20 @@ footer {
   }
   #selector {
     margin-left: -35px;
+	width: auto;
   }
   .boton-flotante {
-    bottom: 80px;
-    right: 20px;
+    border-radius: 27px;
+	  background-color: #262626;
+	  border: 1px solid #001F61;
+	  box-shadow: 0 16px 22px -17px #03153B;
+	  color: #fff;
+	  font-size: 16px;
+	  line-height: 20px;
+	  padding: 12px 20px;
+	  position: fixed;
+	  bottom: 80px;
+	  right: 10px;
+	  z-index: 999;
   }
 }
