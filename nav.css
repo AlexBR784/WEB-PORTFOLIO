@@ -199,7 +199,9 @@ footer {
     height: 200px; /*Acortamos altura carousel*/
   }
   #mapa {
-    z-index: 998;
+    z-index: 2;
+	width: 600px;
+	height: 200px;
   }
   p, h1, h2, h3 {
     padding-left: 10px;
