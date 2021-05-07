@@ -27,7 +27,7 @@
         </li>
         <li class="nav-item">
           <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
+            <div class="dropdown-menu"> <a href="#Tarea_Sim.html" id="tar3" class="dropdown-item text-dark">Actividades</a></div>
           </div>
         </li>
         <li class="nav-item">
@@ -56,28 +56,47 @@
   <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-      <h1 id="header-sim"> </h1>
-      <p id="p-tareaS"></p>
-	  <img id="video-sim1" class="img-thumbnail text-center imagen-tarea mostrar"src="" alt="" width="600" height="600">
-      <p id="p-tareaS1"></p>
+      <div class="card mt-3 tab-card">
+        <div class="card-header tab-card-header">
+          <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One" aria-selected="true">Tarea 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="false">Tarea 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three" aria-selected="false">Tarea 3</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
+            <h5 class="card-title">Tarea 1 de simulacion: Métodos de Integración numérica en simulación</h5>
+            <p class="card-text"><br>Esta practica esta dividida en dos tareas, la primera, un pendulo y la segunda, un sistema planetario. Para la primera (el péndulo), vamos a simularlo haciendo uso de los integradores Euler Explicito, Euler Simplectico, Heun, Runge-Kutta 2 y Runge-Kutta 4. Este pendulo, tendra propiedades de muelle, por lo que este tambien se tendrán en cuenta conceptos como la constante elastica Ke. Tambien calculamos las fuerzas, como la elastica Fe, el peso Fw, causada por la gravedad g y una fuerza de fricción Fd, con un factor de proporcionalidad Kd.<br><br>La segunda tarea de esta práctica consistia en hacer un sistema planetario. Esta vez se trata de un planeta que orbita alrededor de una estrella. En este problema se hace uso de la Ley de Gravitación Universal, asi como la masa de la Tierra, del sol y la distancia entre ellos. Como se puede intuir, en este problema hay que tener en cuenta que los valores de los datos son muy grandes, por lo que, hay que operar con ellos y tratarlos de tal forma que se adapten a nuestro caso, como ejemplo claro tenemos el tiempo que tarda la Tierra en dar una vuelta completa, ya que no podemos esperar 365 dias a que se complete, debemos 'escalar' ese tiempo a uno mas apropiado, en nuestro caso, 6 segundos. Como funcionalidad a comentar, si hacemos click en la ventana del sistema, se relanzaria el planeta desde ese punto.<br><br> </p>
+            <img class='img-thumbnail' src='./imagenes/pendulo.png' alt='img_uni' width='600' height='600'>
+            <p class="card-text"><li><br><br><i>*La primera imagen es en relacion con la primera tarea (péndulo). La segunda imagen se relaciona con la segunda tarea (Sistema planetario)</i></p>
+            <img class='img-thumbnail' src='./imagenes/planetas.png' width='400' height='200'>
+              <!--<a href="#" class="btn btn-primary">Go somewhere</a> -->             
+          </div>
+          <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
+            <h5 class="card-title">Tarea 2 de simulación: Sistemas de Partículas</h5>
+            <p class="card-text">Se pretende simular un castillo de fuegos artificiales para recrear en 2 dimensiones la Nit del Foc de las Fallas de Valencia. Para el desarrollo del problema a parte del programa principal, utilizamos las clases Fireworks, que contiene la clase Rockets que esta a su vez tiene muchas clases Particle, la cual una de cada Rocket es una Carcasa.<br>El programa principal capta cada vez que hacemos click en la pantalla creando un Rocket a partir de Fireworks con la posición y velocidad dependientes de dónde hayamos clicado. Este rocket a su vez crea una Particle que hará de carcasa (con su velocidad, tamaño, posición...) y a su vez un vector de Particles (que serán las partículas de la explosión) que dependiendo de la velocidad de estas dibujarán una forma u otra en la simulación.<br>En este problema habrá dos fuerzas: la fuerza del viento y la del peso. La fuerza del peso, se calculará como siempre, multiplicando la gravedad por la masa. La fuerza del viento se calculará de manera parecida a la fuerza de rozamiento, vector por constante del viento. Pero lo que la diferencia es que calculamos previamente el vector como viento aparente en vez de emplear la velocidad del viento sin más.<br><br></p>             
+            <p class="card-text">Hemos realizado 3 tipos de palmeras: Circular, Espiral y Corazón. <br><br>Para el viento, hemos implementado que, mediante las flechas del teclado se pueda aumentar o disminuir la velocidad de este. Además de que el usuario podra modificar la dirección del viento mediante una interfaz grafica (se puede observar en la imagen).<br><br></p>
+            <img class='img-thumbnail' src='./imagenes/fuegos.png' alt='img_uni' width='600' height='600'>
+          </div>
+          <div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
+            <h5 class="card-title">Tab Card Three</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>              
+          </div>
+
+        </div>
+
+
     </div>
     <div class="col-sm-3"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <hr class="featurette-divider">
-    </div>
-    <div class="col-md-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-2"> <a id="ant-ejS" href="#" onclick="antEj(1);">Ejercicio anterior</a> </div>
-    <div class="col-sm-2"></div>
-    <div class="col-md-2"> <a id="sig-ejS" href="#" onclick="nextEj(1);">Ejercicio siguiente
-      
-	</a></div>
-    <div class="col-md-5"></div>
   </div>
   <div class="row">
     <div class="col-md-2"></div>
