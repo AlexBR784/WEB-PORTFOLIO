@@ -31,7 +31,7 @@
                     </li>
                     <li class="nav-item">
                         <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
-                            <div class="dropdown-menu"> <a href="#Tarea_Sim.html" id="tar3" class="dropdown-item text-dark">Actividades</a></div>
+                            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark">Laboratorios</a><a href="ActividadesSim.html" id="tar4" class="dropdown-item text-dark">Actividades</a></div>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -54,7 +54,7 @@
         </div>
     </nav>
     <div class="jumbotron text-center">
-        <h1>Tareas Simulación</h1>
+        <h1>Laboratorios Simulación</h1>
     </div>
     <main>
         <div class="row">
@@ -64,26 +64,26 @@
                     <div class="card-header tab-card-header">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One" aria-selected="true">Tarea 1</a>
+                                <a class="nav-link" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One" aria-selected="true">Práctica 1</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="false">Tarea 2</a>
+                                <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="false">Práctica 2</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three" aria-selected="false">Tarea 3</a>
+                                <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three" aria-selected="false">Práctica 3</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="three-tab" data-toggle="tab" href="#four" role="tab" aria-controls="Three" aria-selected="false">Tarea 4</a>
+                                <a class="nav-link" id="three-tab" data-toggle="tab" href="#four" role="tab" aria-controls="Three" aria-selected="false">Práctica 4</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="three-tab" data-toggle="tab" href="#five" role="tab" aria-controls="Three" aria-selected="false">Tarea 5</a>
+                                <a class="nav-link" id="three-tab" data-toggle="tab" href="#five" role="tab" aria-controls="Three" aria-selected="false">Práctica 5</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
-                            <h5 class="card-title">Tarea 1 de simulacion: Métodos de Integración numérica en simulación</h5>
+                            <h5 class="card-title">Práctica 1 de simulacion: Métodos de Integración numérica en simulación</h5>
                             <p class="card-text"><br>Esta practica esta dividida en dos tareas, la primera, un pendulo y la segunda, un sistema planetario. Para la primera (el péndulo), vamos a simularlo haciendo uso de los integradores Euler Explicito, Euler Simplectico,
                                 Heun, Runge-Kutta 2 y Runge-Kutta 4. Este pendulo, tendra propiedades de muelle, por lo que este tambien se tendrán en cuenta conceptos como la constante elastica Ke. Tambien calculamos las fuerzas, como la elastica Fe,
                                 el peso Fw, causada por la gravedad g y una fuerza de fricción Fd, con un factor de proporcionalidad Kd.<br><br>La segunda tarea de esta práctica consistia en hacer un sistema planetario. Esta vez se trata de un planeta
@@ -91,14 +91,15 @@
                                 en cuenta que los valores de los datos son muy grandes, por lo que, hay que operar con ellos y tratarlos de tal forma que se adapten a nuestro caso, como ejemplo claro tenemos el tiempo que tarda la Tierra en dar una vuelta
                                 completa, ya que no podemos esperar 365 dias a que se complete, debemos 'escalar' ese tiempo a uno mas apropiado, en nuestro caso, 6 segundos. Como funcionalidad a comentar, si hacemos click en la ventana del sistema, se
                                 relanzaria el planeta desde ese punto.<br><br> </p>
-                            <img class='img-thumbnail' src='./imagenes/pendulo.png' alt='img_uni' width='600' height='600'>
+                            <img class='img-taras' src='./imagenes/pendulo.png' alt='img_uni' width='600' height='600'>
                             <p class="card-text">
-                                <li><br><br><i>*La primera imagen es en relacion con la primera tarea (péndulo). La segunda imagen se relaciona con la segunda tarea (Sistema planetario)</i></p>
+                                <br><br><i>*La primera imagen es en relacion con la primera tarea (péndulo). La segunda imagen se relaciona con la segunda tarea (Sistema planetario)</i></p>
+
                             <img class='img-thumbnail' src='./imagenes/planetas.png' width='400' height='200'>
                             <!--<a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                         <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
-                            <h5 class="card-title">Tarea 2 de simulación: Sistemas de Partículas</h5>
+                            <h5 class="card-title">Práctica 2 de simulación: Sistemas de Partículas</h5>
                             <p class="card-text">Se pretende simular un castillo de fuegos artificiales para recrear en 2 dimensiones la Nit del Foc de las Fallas de Valencia. Para el desarrollo del problema a parte del programa principal, utilizamos las clases Fireworks,
                                 que contiene la clase Rockets que esta a su vez tiene muchas clases Particle, la cual una de cada Rocket es una Carcasa.<br>El programa principal capta cada vez que hacemos click en la pantalla creando un Rocket a partir
                                 de Fireworks con la posición y velocidad dependientes de dónde hayamos clicado. Este rocket a su vez crea una Particle que hará de carcasa (con su velocidad, tamaño, posición...) y a su vez un vector de Particles (que serán
@@ -110,19 +111,60 @@
                             <img class='img-thumbnail' src='./imagenes/fuegos.png' alt='img_uni' width='600' height='600'>
                         </div>
                         <div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
-                            <h5 class="card-title">Tarea 3 de simulación: Modelos de colisiones de partículas</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Práctica 3 de simulación: Modelos de colisiones de partículas</h5>
+                            <br>
+                            <h5 class="card-subtitle mb-2 text-muted">Billar Francés</h5>
+                            <hr>
+                            <p class="card-text">Para esta primera parte se nos ha pedido que simulemos un billar francés (sin troneras) con sus debidas colisiones, bola-bola (partícula-partícula) y bola-lateral (partícula-plano). El modelo de colisiones que se emplea para
+                                este primer ejercicio es el basado en velocidades.</p>
+                            <img class="img-tareas" src="./imagenes/billar_frances.png" alt="billar">
+                            <h5 class="card-subtitle mb-2 text-muted">Estructuras de Datos</h5>
+                            <hr>
+                            <p class="card-text">El sistema basado en muelles trabaja mucho mejor y de resultados más precisos (con más partículas) respecto al modelo basado en velocidades. Sin embargo, el método de “Comprobar todas con todas” hemos visto que tiene un rendimiento
+                                no del todo bueno cuando el número de partículas crece en desmedida. Para solventar este problema, dejaremos de “comprobar todas con todas” e implementaremos métodos que ahora “comprobarán por vecindarios”. Los métodos
+                                de almacenamiento que nos van a permitir esta comprobación son las estructuras de datos grid y la tabla hash.
+                            </p>
+                            <img class="img-tareas" src="./imagenes/hash.png" alt="hash">
+                            <p class="card-text">Una vez hemos programado estos dos nuevos métodos, vamos a realizar el estudio de la escalabilidad del sistema. Para ello vamos a realizar gráficas en las que compararemos el tiempo de simulación frente al número de partículas.
+                                Como las que se ven a continuación:
+                            </p>
+                            <img class="img-tareas" src="./imagenes/hashVSgrid.png" alt="comparacion metodos">
+                            <i>Comparativa Hash con Grid (Distintos tamaños de celda)</i>
+                            <br><br>
+                            <h5 class="card-subtitle mb-2 text-muted">Video</h5>
+                            <hr>
+                            <p class="card-text">A continuación os dejamos un video en el que vereis la demostración de la simulación del billar francés y del funcionamiento de las estructuras de datos</p>
+                            <iframe style="height:50vh" class="img-tareas" src="https://www.youtube.com/embed/0jqlVKnYbME" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="tab-pane fade p-3" id="four" role="tabpanel" aria-labelledby="three-tab">
-                            <h5 class="card-title">Tarea 4 de simulación: Simulación de deformables y roturas</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Práctica 4 de simulación: Simulación de deformables y roturas</h5>
+                            <p class="card-text">En esta práctica se nos pide desarrollar mediante estructuras con muelles el efecto de una tela que va a recibir el impacto de una pelota. Generando que la pelota rebote en caso de no ir lo suficientemente fuerte o rompa la
+                                malla en caso de forzar la resistencia de los muelles. Lo importante de esta parte es como se han construido los muelles a partir de los nodos que van a formar la malla. Para ello y depende del tipo, hemos seguido un procedimiento
+                                u otro. Los tipos principales son: STRUCTURAL, BEND, SHEAR. Los demas modelos surgirán de combinaciones de esos 3 principales.
+                            </p>
+                            <small>
+                                <p class="card-text">*Ilustraciones de los tipos</p>
+                            </small>
+                            <img class="img-tareas" src="./imagenes/metodos-muelles.png" alt="structuralbendshear">
+                            <small>
+                                    <p class="card-text">*Bola golpeando la red pero sin romperla</p>
+                            </small>
+                            <img class="img-tareas" src="./imagenes/bola-tela.png" alt="structural-simple">
+
+                            <small>
+                                <p class="card-text">*Bola golpeando la red pero logrando romperla</p>
+                            </small>
+
+                            <img class="img-tareas" src="./imagenes/rompiendo-tela.png" alt="break">
+                            <br>
+                            <h5 class="card-subtitle mb-2 text-muted">Video</h5>
+                            <hr>
+                            <p class="card-text">A continuación os dejamos un video en el que vereis la demostración de los distintos tipos de estructuras y sus combinaciones. Además de pruebas como distintos tamaños de esfera, roturas y alguna inestabilidad de la simulación.</p>
+                            <iframe style="height:50vh" class="img-tareas" src="https://www.youtube.com/embed/JPMGGsl4CWk" title="Practica 4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="tab-pane fade p-3" id="five" role="tabpanel" aria-labelledby="three-tab">
                             <h5 class="card-title">Tarea 5 de simulación: Simulación de Ondas con Mapas de Altura</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">No esta hecha</p>
                         </div>
 
                     </div>

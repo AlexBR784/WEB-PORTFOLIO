@@ -12,7 +12,12 @@ var videoTareaAni = document.getElementById("video-tarea");
 var videoTareaSim = document.getElementById("video-sim");
 var videoTareaSim1 = document.getElementById("video-sim1");
 var pTareaSim = document.getElementById("p-tareaS");
+var formBtn = document.getElementById("form-btn");
 var ej = 1;
+
+formBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+})
 
 btn_flotante.addEventListener('click', () => {
     panel_flotante_contenedor.classList.toggle('visible');

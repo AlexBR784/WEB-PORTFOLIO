@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -54,64 +54,71 @@
         </div>
     </nav>
     <div class="jumbotron text-center">
-        <h1>Tareas animacion</h1>
+        <h1>Tareas Simulación</h1>
     </div>
     <main>
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <h1 id="header-tarea"></h1>
-                <p id="p-tarea1"></p>
-                <iframe id="video-tarea" width="1000" height="600" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p id="p-tarea2"></p>
-                <p id="p-tarea3"></p>
-            </div>
-            <div class="col-sm-3"></div>
-        </div>
+                <div class="card mt-3 tab-card">
+                    <div class="card-header tab-card-header">
+                        <ul class="nav nav-tabs card-header-tabs" id="t-myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="t-one-tab" data-toggle="tab" href="#t-one" role="tab" aria-controls="One" aria-selected="true">Tema 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="t-two-tab" data-toggle="tab" href="#t-two" role="tab" aria-controls="Two" aria-selected="false">Tema 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="t-three-tab" data-toggle="tab" href="#t-three" role="tab" aria-controls="Three" aria-selected="false">Tema 3</a>
+                            </li>
+                        </ul>
+                    </div>
 
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <hr class="featurette-divider">
+                    <div class="tab-content" id="t-myTabContent">
+                        <div class="tab-pane fade show active p-3" id="t-one" role="tabpanel" aria-labelledby="t-one-tab">
+                            <h5 class="card-title">TITULO</h5>
+                            <p class="card-text"></p>
+                            <img class='img-taras' src='#' alt='IMAGEN' width='600' height='600'>
+                            <p class="card-text">
+                                <br><br><i>*La primera imagen es en relacion con la primera tarea (péndulo). La segunda imagen se relaciona con la segunda tarea (Sistema planetario)</i></p>
+
+                            <img class='img-thumbnail' src='#' width='400' height='200' alt='IMAGEN'>
+                            <!--<a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="col-sm-3"></div>
             </div>
-            <div class="col-md-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-2"> <a id="ant-ejS" href="#" onclick="antEj(0);">Ejercicio anterior</a> </div>
-            <div class="col-sm-2"></div>
-            <div class="col-md-2"> <a id="sig-ejS" href="#" onclick="nextEj(0);">Ejercicio siguiente</a></div>
-            <div class="col-md-5"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <hr class="featurette-divider">
-            </div>
-            <div class="col-md-2"></div>
-        </div>
     </main>
+
+
+
     <!-- MENU FLOTANTE -->
     <div class="panel-flotante-contenedor">
         <div class="panel-flotante">
             <p>Modifica la apariencia</p>
-            <i id="sol" class="fas fa-sun btn"></i> </div>
+            <i id="sol" class="fas fa-sun btn"></i> <i id="volumen" class="fas fa-volume-up btn"></i></div>
     </div>
     <button class="boton-flotante">Abrir Panel</button>
-    <script src="script.js" type="application/javascript"></script>
+
     <!-- FOOTER -->
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <hr class="featurette-divider">
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
     <footer class="container">
         <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
         <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
     </footer>
 </body>
 <script src="script.js" type="application/javascript"></script>
-<script>
-    window.onload = () => {
-        ej = localStorage.getItem("ejercicio");
-        changeContent(0);
-
-    }
-</script>
 
 </html>
