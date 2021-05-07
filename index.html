@@ -1,206 +1,209 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootst
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootst
 rap.min.css">
-<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.m
-in.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd
-/popper.min.js"></script> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstra
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.m
+in.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd
+/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstra
 p.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="nav.css">
-<link rel="stylesheet" href="Audio/style_audio.css">
-<script src="https://kit.fontawesome.com/945c5aac94.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="Audio/style_audio.css">
+    <script src="https://kit.fontawesome.com/945c5aac94.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<!-- NAVEGADOR -->
-<nav id="navbar" class="navbar navbar-expand-sm site-header sticky-top py-1" data-toggle="affix">
-  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap"> <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="imagenes/logo1.png" alt="logo_portfolio"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars color_barras"></i></span> </button>
-    <div class="collapse navbar-collapse text-center" id="navbarsExample11">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Animación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Ani.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Ani.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a></div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Producción y Edición Audiovisual</a>
-            <div class="dropdown-menu"> <a href="Tarea_PEA.html" id="tar5" class="dropdown-item text-dark" >Corto</a> </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Perfil</a>
-            <div class="dropdown-menu"> <a href="perfiles.html" id="tar6" class="dropdown-item text-dark" >Alumnos</a></div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Contacto</a>
-            <div class="dropdown-menu"> <a href="contacto.html" id="tar7" class="dropdown-item text-dark" >Contáctanos</a></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-	
-<!-- CAROUSSEL -->
-<div id="demo" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-    <li data-target="#demo" data-slide-to="3"></li>
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active"> <img src="imagenes/port_banner.png" alt="car_banner" width="100%" height="350">
-      <div class="carousel-caption">
-        <h2>Portfolio</h2>
-        <p class="ca-p"> ¡Bienvenidos a nuestro portfolio! En esta página recogeremos lo que hemos ido haciendo estos últimos años, en las asignaturas de nuestro grado. </p>
-      </div>
-    </div>
-    <div class="carousel-item"> <img src="imagenes/ani_banner.png" alt="ani_banner" width="100%" height="350">
-      <div class="carousel-caption">
-        <h2>Animación</h2>
-        <p class="ca-p"> En esta asignatura hemos trabajado con Blender y Python. Desarrollando un Add-On que nos permitía manipular
-          trayectorias, generando estas de velocidad constante o a manipular por nosotros. Además de otras cosas como copia de
-          elementos generación de trayectorias aleatorias, aspectos que veremos a continuación... </p>
-      </div>
-    </div>
-    <div class="carousel-item"> <img src="imagenes/sim_banner.png" alt="sim_banner" width="100%" height="350">
-      <div class="carousel-caption">
-        <h2>Simulación</h2>
-        <p class="ca-p"> En esta asignatura hemos trabajado con Processing. Hemos desarrollado integradores, emisores de partículas, colisiones entre estas
-          , a parte de aplicarlas a casos reales como: la simulación de una fuente, una bandera... </p>
-      </div>
-    </div>
-    <div class="carousel-item"> <img src="imagenes/pea_banner.png" alt="pea_banner" width="100%" height="350">
-      <div class="carousel-caption" style="background-color: grey; padding:15px;">
-        <h2>PEA</h2>
-        <p class="ca-p"> En esta asignatura hemos desarrollado un corto junto a 4 compañeros más. Hemos utilizado After Effects y Adobe Premiere. De este corto veremos
-          desde su guión, desarrollo de personajes, storyboard... </p>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#demo" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#demo" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> </div>
+    <!-- NAVEGADOR -->
+    <nav id="navbar" class="navbar navbar-expand-sm site-header sticky-top py-1" data-toggle="affix">
+        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+            <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="imagenes/logo1.png" alt="logo_portfolio"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars color_barras"></i></span> </button>
+            <div class="collapse navbar-collapse text-center" id="navbarsExample11">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Animación</a>
+                            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Ani.html" id="tar3"
+                                    class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Ani.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
+                            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3"
+                                    class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Producción y Edición Audiovisual</a>
+                            <div class="dropdown-menu"> <a href="Tarea_PEA.html" id="tar5" class="dropdown-item text-dark">Corto</a> </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Perfil</a>
+                            <div class="dropdown-menu"> <a href="perfiles.html" id="tar6" class="dropdown-item text-dark">Alumnos</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Contacto</a>
+                            <div class="dropdown-menu"> <a href="contacto.html" id="tar7" class="dropdown-item text-dark">Contáctanos</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<!--ALUMNOS -->
-<main>
-  <div class="container" style="text-align: center;padding-top: 20px;">
-    <h1> ¿Quiénes somos?</h1>
-  </div>
-  <div class="row">
-    <div class="container marketing">
-      <div class="row">
-        <div class="col-lg-5" style="text-align: center;"><img class="rounded-circle"src="imagenes/contactoL.png" alt="alumno1" width="125" height="125">
-          <h5>Luis Albacete Caballero</h5>
-          <p> ¡Hola! Soy Luis Albacete Caballero, vivo en Montserrat, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Álex. </p>
-          <a href="perfiles.html" class="btn btn-link">Saber más...</a> </div>
-        <div class="col-lg-2"> </div>
-        <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle"src="imagenes/contactoA.png" alt="alumno1" width="125" height="125">
-          <h5>Alejandro Bernardo Rupérez</h5>
-          <p> ¡Hola! Soy Alejandro Bernardo Rupérez, vivo en la Eliana, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Luis. </p>
-          <a href="perfiles.html" class="btn btn-link">Saber más...</a> </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <hr class="featurette-divider">
-    </div>
-    <div class="col-md-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-      <div class="row" >
-        <div class="col-md-5"> <img class="img-thumbnail"src="imagenes/uni.png" alt="img_uni" width="600" height="600"> </div>
-        <div class="col-md-7" style="padding-top:10%;">
-          <h2 class="featurette-heading"> Escuela Técnica Superior de Ingeniería</h2>
-          <p class="lead"> Es en este centro de Burjassot, en la Universitat de València, dónde nos conocimos y cursamos durante 4 años el grado de Ingeniería Multimedia</p>
+    <!-- CAROUSSEL -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active"> <img src="imagenes/port_banner.png" alt="car_banner" width="100%" height="350">
+                <div class="carousel-caption">
+                    <h2>Portfolio</h2>
+                    <p class="ca-p"> ¡Bienvenidos a nuestro portfolio! En esta página recogeremos lo que hemos ido haciendo estos últimos años, en las asignaturas de nuestro grado. </p>
+                </div>
+            </div>
+            <div class="carousel-item"> <img src="imagenes/ani_banner.png" alt="ani_banner" width="100%" height="350">
+                <div class="carousel-caption">
+                    <h2>Animación</h2>
+                    <p class="ca-p"> En esta asignatura hemos trabajado con Blender y Python. Desarrollando un Add-On que nos permitía manipular trayectorias, generando estas de velocidad constante o a manipular por nosotros. Además de otras cosas como copia de elementos
+                        generación de trayectorias aleatorias, aspectos que veremos a continuación... </p>
+                </div>
+            </div>
+            <div class="carousel-item"> <img src="imagenes/sim_banner.png" alt="sim_banner" width="100%" height="350">
+                <div class="carousel-caption">
+                    <h2>Simulación</h2>
+                    <p class="ca-p"> En esta asignatura hemos trabajado con Processing. Hemos desarrollado integradores, emisores de partículas, colisiones entre estas , a parte de aplicarlas a casos reales como: la simulación de una fuente, una bandera... </p>
+                </div>
+            </div>
+            <div class="carousel-item"> <img src="imagenes/pea_banner.png" alt="pea_banner" width="100%" height="350">
+                <div class="carousel-caption" style="background-color: grey; padding:15px;">
+                    <h2>PEA</h2>
+                    <p class="ca-p"> En esta asignatura hemos desarrollado un corto junto a 4 compañeros más. Hemos utilizado After Effects y Adobe Premiere. De este corto veremos desde su guión, desarrollo de personajes, storyboard... </p>
+                </div>
+            </div>
         </div>
-      </div>
-      <hr class="featurette-divider">
-      <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-2">
-          <h2 class="featurette-heading titMusica"> Música de fondo</h2>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
+    </div>
+
+    <!--ALUMNOS -->
+    <main>
+        <div class="container" style="text-align: center;padding-top: 20px;">
+            <h1> ¿Quiénes somos?</h1>
         </div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-3">
-          <div class="parte_audio">
-            <div id="selector" class="caja_sel">
-              <div class="radios">
-                <div class="container_radio">
-                  <select name="audio" id="audios">
+        <div class="row">
+            <div class="container marketing">
+                <div class="row">
+                    <div class="col-lg-5" style="text-align: center;"><img class="rounded-circle" src="imagenes/contactoL.png" alt="alumno1" width="125" height="125">
+                        <h5>Luis Albacete Caballero</h5>
+                        <p> ¡Hola! Soy Luis Albacete Caballero, vivo en Montserrat, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Álex. </p>
+                        <a href="perfiles.html" class="btn btn-link">Saber más...</a> </div>
+                    <div class="col-lg-2"> </div>
+                    <div class="col-lg-5" style="text-align: center;"> <img class="rounded-circle" src="imagenes/contactoA.png" alt="alumno1" width="125" height="125">
+                        <h5>Alejandro Bernardo Rupérez</h5>
+                        <p> ¡Hola! Soy Alejandro Bernardo Rupérez, vivo en la Eliana, Valencia. He estudiado Ingeniería Multimedia en la Universitat de València junto a Luis. </p>
+                        <a href="perfiles.html" class="btn btn-link">Saber más...</a> </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <hr class="featurette-divider">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-md-5"> <img class="img-thumbnail" src="imagenes/uni.png" alt="img_uni" width="600" height="600"> </div>
+                    <div class="col-md-7" style="padding-top:10%;">
+                        <h2 class="featurette-heading"> Escuela Técnica Superior de Ingeniería</h2>
+                        <p class="lead"> Es en este centro de Burjassot, en la Universitat de València, dónde nos conocimos y cursamos durante 4 años el grado de Ingeniería Multimedia</p>
+                    </div>
+                </div>
+                <hr class="featurette-divider">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2">
+                        <h2 class="featurette-heading titMusica"> Música de fondo</h2>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3">
+                        <div class="parte_audio">
+                            <div id="selector" class="caja_sel">
+                                <div class="radios">
+                                    <div class="container_radio">
+                                        <select name="audio" id="audios">
                     <option value="Audio/Bg_music.mp3">Music</option>
                     <option value="Audio/horse2.ogv">Audio 2</option>
                   </select>
-                  <p id="dura">Este audio tiene una duración total de:</p>
-                  <p id="tiempo_res">Tiempo restante: </p>
-                  <p id="rep">Estas reproduciendo: </p>
-                  <p id="estado">Estado de la reproducción: </p>
-                </div>
-              </div>
-            </div>
-            <div class="caja_audio">
-              <audio id="audio" controls autoplay="autoplay" loop preload="auto">
+                                        <p id="dura">Este audio tiene una duración total de:</p>
+                                        <p id="tiempo_res">Tiempo restante: </p>
+                                        <p id="rep">Estas reproduciendo: </p>
+                                        <p id="estado">Estado de la reproducción: </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caja_audio">
+                                <audio id="audio" controls autoplay="autoplay" loop preload="auto">
                 <source id="audioSrc" src="Audio/Bg_music.mp3" type="audio/ogg">
               </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-2"></div>
         </div>
-      </div>
+    </main>
+
+    <!-- MENU FLOTANTE -->
+    <div class="panel-flotante-contenedor">
+        <div class="panel-flotante">
+            <p>Modifica la apariencia</p>
+            <i id="sol" class="fas fa-sun btn"></i> <i id="volumen" class="fas fa-volume-up btn"></i></div>
     </div>
-    <div class="col-2"></div>
-  </div>
-</main>
+    <button class="boton-flotante">Abrir Panel</button>
 
-<!-- MENU FLOTANTE -->
-<div class="panel-flotante-contenedor">
-  <div class="panel-flotante">
-    <p>Modifica la apariencia</p>
-    <i id="sol" class="fas fa-sun btn"></i> <i id="volumen" class="fas fa-volume-up btn"></i></div>
-</div>
-<button class="boton-flotante">Abrir Panel</button>
-
-<!-- FOOTER -->
-<div class="row">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-8">
-    <hr class="featurette-divider">
-  </div>
-  <div class="col-sm-2"></div>
-</div>
-<footer class="container">
-  <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
-  <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
-</footer>
+    <!-- FOOTER -->
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <hr class="featurette-divider">
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <footer class="container">
+        <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
+        <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
+    </footer>
 </body>
 <script src="script.js" type="application/javascript"></script>
 <script src="Audio/script_audio.js" type="text/javascript"></script>
 <script>
-	window.onload = ()=>{   //Para cargar video desde el index y asi poder mostrar su duracion
-		a.paused = false;
-		playAudioOnLoad();
-		v.onloadeddata = () => {
-  		dur.innerHTML = "Duración: " + v.duration + " seg.";
-		}
-	}
-	
+    window.onload = () => { //Para cargar video desde el index y asi poder mostrar su duracion
+        a.paused = false;
+        playAudioOnLoad();
+        v.onloadeddata = () => {
+            dur.innerHTML = "Duración: " + v.duration + " seg.";
+        }
+    }
 </script>
+
 </html>

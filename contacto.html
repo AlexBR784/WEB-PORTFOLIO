@@ -1,162 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<title>Portfolio</title>
-<!-- Geoposicionamiento-->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
-<style>
-.caja {
-	width: 300px;
-	padding: 10px;
-	border-radius: 0;
-	border-color: #ccc;
-	border-width: 0 0 2px 0;
-	border-style: none none solid none;
-	box-shadow: none;
-	resize: none;
-}
-.caja:hover {
-	box-shadow: none;
-	border-color: #5e9bfc;
-}
-input:focus {
-	border-width: 0 0 2px 0;
-	border-style: none none solid none;
-	box-shadow: none;
-	border-color: #5e9bfc;
-}
-#mapa {
-	width: 500px;
-	height: 500px;
-}
-</style>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <!-- Geoposicionamiento-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <style>
+        .caja {
+            width: 300px;
+            padding: 10px;
+            border-radius: 0;
+            border-color: #ccc;
+            border-width: 0 0 2px 0;
+            border-style: none none solid none;
+            box-shadow: none;
+            resize: none;
+        }
+        
+        .caja:hover {
+            box-shadow: none;
+            border-color: #5e9bfc;
+        }
+        
+        input:focus {
+            border-width: 0 0 2px 0;
+            border-style: none none solid none;
+            box-shadow: none;
+            border-color: #5e9bfc;
+        }
+        
+        #mapa {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
 
-<!-- Bootstrap y estilos-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="nav.css">
-<script src="https://kit.fontawesome.com/945c5aac94.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap y estilos-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="nav.css">
+    <script src="https://kit.fontawesome.com/945c5aac94.js" crossorigin="anonymous"></script>
 </head>
-<body>
-<!-- NAVEGADOR -->
-<nav id="navbar" class="navbar navbar-expand-sm site-header sticky-top py-1" data-toggle="affix">
-  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap"> <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="imagenes/logo1.png" alt="logo_portfolio"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars color_barras"></i></span> </button>
-    <div class="collapse navbar-collapse text-center" id="navbarsExample11">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Animación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Ani.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Ani.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a></div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Producción y Edición Audiovisual</a>
-            <div class="dropdown-menu"> <a href="Tarea_PEA.html" id="tar5" class="dropdown-item text-dark" >Corto</a> </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Perfil</a>
-            <div class="dropdown-menu"> <a href="perfiles.html" id="tar6" class="dropdown-item text-dark" >Alumnos</a></div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Contacto</a>
-            <div class="dropdown-menu"> <a href="contacto.html" id="tar7" class="dropdown-item text-dark" >Contáctanos</a></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="jumbotron text-center">
-  <h1>Contacto</h1>
-</div>
-<main>
-  <div class="row">
-    <div class="container marketing">
-      <div class="row"> 
-        <!-- Mapa -->
-        <div class="col-lg-5" style="text-align: center;">
-          <div id="mapa" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"></div>
-        </div>
-        <div class="col-lg-2"> </div>
-        <div class="col-lg-5" style="text-align: center;">
-          <form id="contact-form" class="form" action="#" method="POST" role="form" style="padding:10%;">
-            <div class="form-group">
-              <input type="text" class="caja" id="name" name="name" placeholder="Tu nombre" tabindex="1" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="caja" id="email" name="email" placeholder="Tu email" tabindex="2" required>
-            </div>
-            <div class="form-group">
-              <input type="text" class="caja" id="subject" name="subject" placeholder="Asunto" tabindex="3">
-            </div>
-            <div class="form-group">
-              <textarea rows="5" cols="50" name="message" class="caja" id="message" placeholder="Mensaje..." tabindex="4" required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row" style="margin-top:3%">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <hr class="featurette-divider">
-    </div>
-    <div class="col-md-2"></div>
-  </div>
-</main>
 
-<!-- MENU FLOTANTE -->
-<div class="panel-flotante-contenedor">
-  <div class="panel-flotante">
-    <p>Modifica la apariencia</p>
-    <i id="sol" class="fas fa-sun btn"></i> </div>
-</div>
-<button class="boton-flotante">Abrir Panel</button>
-	
-<!-- FOOTER -->
-<footer class="container">
-  <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
-  <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
-</footer>
+<body>
+    <!-- NAVEGADOR -->
+    <nav id="navbar" class="navbar navbar-expand-sm site-header sticky-top py-1" data-toggle="affix">
+        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+            <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="imagenes/logo1.png" alt="logo_portfolio"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars color_barras"></i></span> </button>
+            <div class="collapse navbar-collapse text-center" id="navbarsExample11">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Animación</a>
+                            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Ani.html" id="tar3"
+                                    class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Ani.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
+                            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3"
+                                    class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Producción y Edición Audiovisual</a>
+                            <div class="dropdown-menu"> <a href="Tarea_PEA.html" id="tar5" class="dropdown-item text-dark">Corto</a> </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Perfil</a>
+                            <div class="dropdown-menu"> <a href="perfiles.html" id="tar6" class="dropdown-item text-dark">Alumnos</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Contacto</a>
+                            <div class="dropdown-menu"> <a href="contacto.html" id="tar7" class="dropdown-item text-dark">Contáctanos</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron text-center">
+        <h1>Contacto</h1>
+    </div>
+    <main>
+        <div class="row">
+            <div class="container marketing">
+                <div class="row">
+                    <!-- Mapa -->
+                    <div class="col-lg-5" style="text-align: center;">
+                        <div id="mapa" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"></div>
+                    </div>
+                    <div class="col-lg-2"> </div>
+                    <div class="col-lg-5" style="text-align: center;">
+                        <form id="contact-form" class="form" action="#" method="POST" role="form" style="padding:10%;">
+                            <div class="form-group">
+                                <input type="text" class="caja" id="name" name="name" placeholder="Tu nombre" tabindex="1" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="caja" id="email" name="email" placeholder="Tu email" tabindex="2" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="caja" id="subject" name="subject" placeholder="Asunto" tabindex="3">
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="5" cols="50" name="message" class="caja" id="message" placeholder="Mensaje..." tabindex="4" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:3%">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <hr class="featurette-divider">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </main>
+
+    <!-- MENU FLOTANTE -->
+    <div class="panel-flotante-contenedor">
+        <div class="panel-flotante">
+            <p>Modifica la apariencia</p>
+            <i id="sol" class="fas fa-sun btn"></i> </div>
+    </div>
+    <button class="boton-flotante">Abrir Panel</button>
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
+        <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
+    </footer>
 </body>
 <script src="script.js" type="application/javascript"></script>
 <!-- Script Mapa -->
 <script>
-         var map = L.map('mapa').
-        setView([39.512, -0.425],
+    var map = L.map('mapa').
+    setView([39.512, -0.425],
         16);
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
         maxZoom: 18
-        }).addTo(map);
+    }).addTo(map);
 
-        var marker = L.marker([39.5125, -0.424]).addTo(map);
-        var polygon = L.polygon([
-            [39.5129, -0.425],
-            [39.5137, -0.4239],
-            [39.5127, -0.4227],
-            [39.5119, -0.424]
-        ]).addTo(map);
-        marker.bindPopup("Universitat de València.<br> ETSE").openPopup();
-    </script>
+    var marker = L.marker([39.5125, -0.424]).addTo(map);
+    var polygon = L.polygon([
+        [39.5129, -0.425],
+        [39.5137, -0.4239],
+        [39.5127, -0.4227],
+        [39.5119, -0.424]
+    ]).addTo(map);
+    marker.bindPopup("Universitat de València.<br> ETSE").openPopup();
+</script>
+
 </html>

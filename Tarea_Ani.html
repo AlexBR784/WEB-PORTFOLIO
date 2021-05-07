@@ -1,115 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="nav.css">
-<script src="https://kit.fontawesome.com/945c5aac94.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<!-- NAVEGADOR -->
-<nav id="navbar" class="navbar navbar-expand-sm site-header sticky-top py-1" data-toggle="affix">
-  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap"> <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="imagenes/logo1.png" alt="logo_portfolio"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars color_barras"></i></span> </button>
-    <div class="collapse navbar-collapse text-center" id="navbarsExample11">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Animación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Ani.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Ani.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a></div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
-            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Producción y Edición Audiovisual</a>
-            <div class="dropdown-menu"> <a href="Tarea_PEA.html" id="tar5" class="dropdown-item text-dark" >Corto</a> </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Perfil</a>
-            <div class="dropdown-menu"> <a href="perfiles.html" id="tar6" class="dropdown-item text-dark" >Alumnos</a></div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Contacto</a>
-            <div class="dropdown-menu"> <a href="contacto.html" id="tar7" class="dropdown-item text-dark" >Contáctanos</a></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="jumbotron text-center">
-  <h1>Tareas animacion</h1>
-</div>
-<main>
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-      <h1 id="header-tarea"></h1>
-      <p id="p-tarea1"></p>
-          <iframe id="video-tarea" width="1000" height="600" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p id="p-tarea2"></p>
-      <p id="p-tarea3"></p>
-    </div>
-    <div class="col-sm-3"></div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <hr class="featurette-divider">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="nav.css">
+    <script src="https://kit.fontawesome.com/945c5aac94.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVEGADOR -->
+    <nav id="navbar" class="navbar navbar-expand-sm site-header sticky-top py-1" data-toggle="affix">
+        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+            <a href="index.html" class="navbar-brand"><img class="logo rounded-circle" src="imagenes/logo1.png" alt="logo_portfolio"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars color_barras"></i></span> </button>
+            <div class="collapse navbar-collapse text-center" id="navbarsExample11">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Animación</a>
+                            <div class="dropdown-menu"> <a href="Tarea_Ani.html" id="tar1" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Ani.html" id="tar2" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Ani.html" id="tar3"
+                                    class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Ani.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Simulación</a>
+                            <div class="dropdown-menu"> <a href="Tarea_Sim.html" id="tar3" class="dropdown-item text-dark" onClick="navEj(1)">Tarea 1</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(2)">Tarea 2</a> <a href="Tarea_Sim.html" id="tar3"
+                                    class="dropdown-item text-dark" onClick="navEj(3)">Tarea 3</a> <a href="Tarea_Sim.html" id="tar4" class="dropdown-item text-dark" onClick="navEj(4)">Tarea 4</a> </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Producción y Edición Audiovisual</a>
+                            <div class="dropdown-menu"> <a href="Tarea_PEA.html" id="tar5" class="dropdown-item text-dark">Corto</a> </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Perfil</a>
+                            <div class="dropdown-menu"> <a href="perfiles.html" id="tar6" class="dropdown-item text-dark">Alumnos</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group nav-link"> <a class="btn" data-toggle="dropdown" href="">Contacto</a>
+                            <div class="dropdown-menu"> <a href="contacto.html" id="tar7" class="dropdown-item text-dark">Contáctanos</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron text-center">
+        <h1>Tareas animacion</h1>
     </div>
-    <div class="col-md-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-2"> <a id="ant-ejS" href="#" onclick="antEj(0);">Ejercicio anterior</a> </div>
-    <div class="col-sm-2"></div>
-    <div class="col-md-2"> <a id="sig-ejS" href="#" onclick="nextEj(0);">Ejercicio siguiente</a></div>
-    <div class="col-md-5"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <hr class="featurette-divider">
+    <main>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h1 id="header-tarea"></h1>
+                <p id="p-tarea1"></p>
+                <iframe id="video-tarea" width="1000" height="600" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="p-tarea2"></p>
+                <p id="p-tarea3"></p>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <hr class="featurette-divider">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-2"> <a id="ant-ejS" href="#" onclick="antEj(0);">Ejercicio anterior</a> </div>
+            <div class="col-sm-2"></div>
+            <div class="col-md-2"> <a id="sig-ejS" href="#" onclick="nextEj(0);">Ejercicio siguiente</a></div>
+            <div class="col-md-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <hr class="featurette-divider">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </main>
+    <!-- MENU FLOTANTE -->
+    <div class="panel-flotante-contenedor">
+        <div class="panel-flotante">
+            <p>Modifica la apariencia</p>
+            <i id="sol" class="fas fa-sun btn"></i> </div>
     </div>
-    <div class="col-md-2"></div>
-  </div>
-</main>
-<!-- MENU FLOTANTE -->
-<div class="panel-flotante-contenedor">
-  <div class="panel-flotante">
-    <p>Modifica la apariencia</p>
-    <i id="sol" class="fas fa-sun btn"></i> </div>
-</div>
-<button class="boton-flotante">Abrir Panel</button>
-<script src="script.js" type="application/javascript"></script>
-<!-- FOOTER -->
-<footer class="container">
-  <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
-  <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
-</footer>
+    <button class="boton-flotante">Abrir Panel</button>
+    <script src="script.js" type="application/javascript"></script>
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-right"> <a href="#"> Volver arriba ↑</a> </p>
+        <p> Todos los derechos reservados (c) · 2020 / 2021 </p>
+    </footer>
 </body>
 <script src="script.js" type="application/javascript"></script>
 <script>
-	window.onload = ()=>{
-		ej = localStorage.getItem("ejercicio");
-		changeContent(0);
-		
-	}
-	
-	
-	
+    window.onload = () => {
+        ej = localStorage.getItem("ejercicio");
+        changeContent(0);
+
+    }
 </script>
+
 </html>
