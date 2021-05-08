@@ -1,7 +1,7 @@
 // JavaScript Document
 
-var btn_flotante = document.querySelector('.boton-flotante'); //Conseguimos la clase del boton flotante
-const panel_flotante_contenedor = document.querySelector('.panel-flotante-contenedor'); //Conseguimos la clase del panel contenedor
+var btn_flotante = document.querySelector('.boton-flotante');
+const panel_flotante_contenedor = document.querySelector('.panel-flotante-contenedor');
 var icono_sol = document.getElementById("sol");
 var icono_vol = document.getElementById("volumen");
 var navbar = document.getElementById("navbar");
@@ -12,12 +12,8 @@ var videoTareaAni = document.getElementById("video-tarea");
 var videoTareaSim = document.getElementById("video-sim");
 var videoTareaSim1 = document.getElementById("video-sim1");
 var pTareaSim = document.getElementById("p-tareaS");
-var formBtn = document.getElementById("form-btn");
 var ej = 1;
 
-formBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-})
 
 btn_flotante.addEventListener('click', () => {
     panel_flotante_contenedor.classList.toggle('visible');
